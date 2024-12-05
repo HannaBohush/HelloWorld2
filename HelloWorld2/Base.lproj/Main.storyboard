@@ -18,20 +18,23 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello world!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lZh-Id-Cf1">
                                 <rect key="frame" x="16" y="107" width="408" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="3qW-fg-aWq"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-Bw-MZY">
-                                <rect key="frame" x="182.66666666666666" y="668" width="74.999999999999972" height="35"/>
+                                <rect key="frame" x="145" y="668" width="150" height="35"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="vmW-N4-d2k"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="greetingButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Loy-DO-UCz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -44,10 +47,14 @@
                             <constraint firstItem="lZh-Id-Cf1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vYQ-6H-uHY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="mcn-Bw-MZY" id="WRk-fV-5qf"/>
+                        <outlet property="greetingLabel" destination="lZh-Id-Cf1" id="p0k-Ha-45Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="60" y="4"/>
+            <point key="canvasLocation" x="-370" y="-188"/>
         </scene>
     </scenes>
     <resources>
